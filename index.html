@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
     />
     <title>Yujeong Choung</title>
   </head>
@@ -15,20 +17,22 @@
     <header>
       <nav class="navigation">
         <div class="menu">
-          <div id="menu-open" class="menu-open icon">
-            <i class="fa fa-bars"></i>
+          <div id="menu_open" class="menu_open icon">
+            <i class="fab fa-github icon"></i>
+            <i class="fas fa-envelope icon"></i>
+            <i class="fas fa-bars icon"></i>
           </div>
 
-          <div id="menu-list" class="menu-list">
-            <div id="menu-close" class="menu-close icon">
-              <i class="fa fa-times"></i>
+          <div id="menu_list" class="menu_list">
+            <div id="menu_close" class="menu_close icon">
+              <i class="fas fa-times"></i>
             </div>
 
             <ul>
-              <li><a href="#home" class="nav-link current">Home</a></li>
-              <li><a href="#work" class="nav-link">Work</a></li>
-              <li><a href="#about" class="nav-link">About</a></li>
-              <li><a href="#contact" class="nav-link">Contact</a></li>
+              <li><a href="#home" class="nav_link current">Home</a></li>
+              <li><a href="#work" class="nav_link">Work</a></li>
+              <li><a href="#about" class="nav_link">About</a></li>
+              <li><a href="#contact" class="nav_link">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -39,19 +43,21 @@
     <main class="wrapper">
       <!-- Home -->
       <section class="home" id="home">
-        <div class="home-container">
-          <div class="home-content">
+        <div class="home_container">
+          <div class="home_content">
             <h1>Hello, <br /><span>I am Yujeong Choung</span></h1>
-            <div class="btn-container">
-              <div class="btn-left bar"></div>
-              <button class="work-btn" id="work-btn">Work</button>
-              <div class="btn-right bar"></div>
+            <div class="btn_container">
+              <div class="btn_left bar"></div>
+              <button class="work_btn" id="work_btn">Work</button>
+              <div class="btn_right bar"></div>
             </div>
 
-            <div class="btn-container">
-              <div class="btn-left bar"></div>
-              <button class="resume-btn" id="resume-btn">Resume</button>
-              <div class="btn-right bar"></div>
+            <div class="btn_container">
+              <div class="btn_left bar"></div>
+              <button class="resume_btn" id="resume_btn">
+                <a target="_blank" href="">Resume</a>
+              </button>
+              <div class="btn_right bar"></div>
             </div>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -65,24 +71,85 @@
       </section>
 
       <section class="work" id="work">
-        <div class="work-container">
-          <svg width="100" height="100" class="circle-container">
-            <circle cx="50" cy="50" r="20" fill="#ffe1a2"></circle>
-          </svg>
-          <h2 class="work-title">
-            <span class="w">W</span>
-            <span class="o">O</span>
-            <span class="r">R</span>
-            <span class="k">K</span>
+        <div class="work_container container">
+          <h2 class="work_title title">
+            <span id="work_spell" class="w">W</span>
+            <span id="work_spell" class="o">O</span>
+            <span id="work_spell" class="r">R</span>
+            <span id="work_spell" class="k">K</span>
           </h2>
 
-          <div class="work-conetents"></div>
+          <div class="work_contents">
+            <div class="work1 list">
+              <i class="fas fa-carrot"></i>
+              <img src="./src/yumplan.gif" alt="Meal Planner Website" />
+
+              <h3 class="list_title">YumPlan</h3>
+              <p class="description">
+                A single page application showing the Meal Recipes made with
+                MERN stack.
+              </p>
+              <p class="language">MongoDB, Express, React, Node JS</p>
+
+              <button>Launch Site</button>
+            </div>
+
+            <div class="work2 list">
+              <img src="" alt="E-Commerce Website" />
+              <h3 class="list_title">E_Commerce</h3>
+              <p class="description">~~~~~~ built with MERN stack.</p>
+              <p class="language">React, MongoDB, Express, Nodejs</p>
+            </div>
+
+            <div class="work3 list">
+              <img src="" alt="" />
+              <h3 class="list_title"></h3>
+              <p class="description"></p>
+              <p class="language"></p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="about" id="about"></section>
+      <section class="about" id="about">
+        <div class="about_container container">
+          <h2 class="about_title title">
+            About Me
+            <span class="about_spell">.</span>
+          </h2>
 
-      <section class="contact" id="contact"></section>
+          <div class="about_me">
+            <div class="about_me-profile">
+              <img src="" alt="Yujeong's Photo" />
+              <p class="about_me-location">
+                <strong>Location</strong>: Vancouver BC, Canada
+              </p>
+              <p class="about_me-language">
+                <strong>Language</strong>: English, Korean
+              </p>
+            </div>
+            <p class="about_me-description">
+              Hi, my name is Yujeong and I finished my Computer Studies diploma
+              program on December, 2020.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact_container container">
+          <h2 class="contact_title title">
+            Contact Me
+            <span class="contact_spell">.</span>
+          </h2>
+
+          <div class="contact_me">
+            <div class="about_me-form">
+              <form></form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
