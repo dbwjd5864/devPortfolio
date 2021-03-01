@@ -76,43 +76,75 @@
       <section class="work" id="work">
         <div class="work_container container">
           <h2 class="work_title title">
-            <span id="work_spell" class="w">W</span>
-            <span id="work_spell" class="o">O</span>
-            <span id="work_spell" class="r">R</span>
-            <span id="work_spell" class="k">K</span>
+            <span class="w">W</span>
+            <span class="o">O</span>
+            <span class="r">R</span>
+            <span class="k">K</span>
           </h2>
 
           <div class="work_contents">
             <div class="work1 list">
-              <i class="fas fa-carrot"></i>
+              <div class="list-container">
+                <h3 class="list_title">YumPlan</h3>
+              </div>
 
-              <img
-                class="work_img"
-                src="./src/yumplan.gif"
-                alt="Meal Planner Website"
-              />
+              <div class="work_imgContainer">
+                <img
+                  class="work_img"
+                  src="./src/yumplan.gif"
+                  alt="Meal Planner Website"
+                />
+                <div class="work_imgSite">
+                  <button class="btn-site">Launch Site</button>
+                </div>
+              </div>
 
-              <h3 class="list_title">YumPlan</h3>
-              <p class="description">
-                A single page application showing the Meal Recipes built with
-                MERN stack.
-              </p>
-              <p class="language">
-                MongoDB, Express, React (Reqct Hooks and Reducers), Node JS
-              </p>
-
-              <button>Launch Site</button>
+              <div class="work_details">
+                <p class="description">
+                  <strong>Description</strong> A single page application showing
+                  the Meal Recipes built with MERN stack.
+                </p>
+                <p class="language">
+                  <strong>Language</strong>
+                  <span
+                    >MongoDB
+                    <svg class="work_icon">
+                      <use xlink:href="src/sprite.svg#icon-mongodb"></use>
+                    </svg>
+                  </span>
+                  <span>
+                    Express
+                    <svg class="work_icon">
+                      <use xlink:href="src/sprite.svg#icon-mongodb"></use>
+                    </svg>
+                  </span>
+                  <span>
+                    React (React Hooks and Reducers)<svg class="work_icon">
+                      <use xlink:href="src/sprite.svg#icon-react"></use>
+                    </svg>
+                  </span>
+                  <span>
+                    Node JS
+                    <svg class="work_icon">
+                      <use xlink:href="src/sprite.svg#icon-node-dot-js"></use>
+                    </svg>
+                  </span>
+                </p>
+              </div>
             </div>
 
             <div class="work2 list">
-              <img src="" alt="E-Commerce Website" />
-              <h3 class="list_title">E_Commerce</h3>
+              <div class="list-container">
+                <h3 class="list_title">Sweets</h3>
+              </div>
+              <img class="work_img" src="" alt="Sweets Game" />
+
               <p class="description">~~~~~~ built with MERN stack.</p>
               <p class="language">React, MongoDB, Express, Nodejs</p>
             </div>
 
             <div class="work3 list">
-              <img src="" alt="" />
+              <img class="work_img" src="" alt="" />
               <h3 class="list_title"></h3>
               <p class="description"></p>
               <p class="language"></p>
@@ -122,28 +154,38 @@
       </section>
 
       <section class="about" id="about">
-        <div class="about_container container">
-          <h2 class="about_title title">
-            About Me
-            <span class="about_spell">.</span>
-          </h2>
-
+        <h2 class="about_title title">
+          <span class="title_about">About</span>
+          <div class="title_Me">
+            <span class="me">ME</span>
+          </div>
+        </h2>
+        <div class="about_container-left container">
           <div class="about_me">
             <div class="about_me-profile">
-              <img src="" alt="Yujeong's Photo" />
-              <p class="about_me-name"><strong>Name</strong>: Yujeong Choung</p>
-              <p class="about_me-location">
-                <strong>Location</strong>: Vancouver BC, Canada
-              </p>
-              <p class="about_me-language">
-                <strong>Language</strong>: English, Korean
-              </p>
+              <div class="about_me-imgContainer">
+                <img
+                  class="about_img"
+                  src="src/profile.JPG"
+                  alt="Yujeong's Photo"
+                />
+                <div class="about_img-overlay"></div>
+              </div>
             </div>
-            <p class="about_me-description">
-              Hi, my name is Yujeong and I finished my Computer Studies diploma
-              program on December, 2020.
-            </p>
           </div>
+        </div>
+        <div class="about_container-right container">
+          <p class="about_me-name"><strong>Name</strong>: Yujeong Choung</p>
+          <p class="about_me-location">
+            <strong>Location</strong>: Vancouver BC, Canada
+          </p>
+          <p class="about_me-language">
+            <strong>Language</strong>: English, Korean
+          </p>
+          <p class="about_me-description">
+            Hi, my name is Yujeong and I finished my Computer Studies diploma
+            program on December, 2020.
+          </p>
         </div>
       </section>
 

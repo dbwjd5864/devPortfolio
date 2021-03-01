@@ -3,7 +3,6 @@ const closeMenu = document.getElementById('menu_close');
 const menuList = document.getElementById('menu_list');
 const navLinks = document.querySelectorAll('.nav_link');
 const sections = document.querySelectorAll('section');
-console.log(sections); //////////
 const scrollToTop = document.getElementById('scrollToTop');
 
 // Open the Menu
@@ -34,7 +33,7 @@ window.addEventListener('scroll', () => {
   const { scrollTop } = document.documentElement;
   sections.forEach((link, index) => {
     if (
-      scrollTop > link.offsetTop - sections[0].offsetTop &&
+      scrollTop >= link.offsetTop - sections[0].offsetTop &&
       scrollTop < link.offsetHeight + link.offsetTop - 20
     ) {
       navLinks[index].classList.add('current');
@@ -42,6 +41,12 @@ window.addEventListener('scroll', () => {
       navLinks[index].classList.remove('current');
     }
   });
+
+  if (scrollTop > sections[0].offsetTop) {
+    scrollToTop.classList.add('scroll-active');
+  } else {
+    scrollToTop.classList.remove('scroll-active');
+  }
 });
 
 scrollToTop.addEventListener('click', () =>
