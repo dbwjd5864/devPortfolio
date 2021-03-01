@@ -18,8 +18,6 @@
       <nav class="navigation">
         <div class="menu">
           <div id="menu_open" class="menu_open icon">
-            <i class="fab fa-github icon"></i>
-            <i class="fas fa-envelope icon"></i>
             <i class="fas fa-bars icon"></i>
           </div>
 
@@ -59,6 +57,11 @@
               </button>
               <div class="btn_right bar"></div>
             </div>
+
+            <div class="icon-container">
+              <i class="fab fa-github icon"></i>
+              <i class="fas fa-envelope icon"></i>
+            </div>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
@@ -82,14 +85,21 @@
           <div class="work_contents">
             <div class="work1 list">
               <i class="fas fa-carrot"></i>
-              <img src="./src/yumplan.gif" alt="Meal Planner Website" />
+
+              <img
+                class="work_img"
+                src="./src/yumplan.gif"
+                alt="Meal Planner Website"
+              />
 
               <h3 class="list_title">YumPlan</h3>
               <p class="description">
-                A single page application showing the Meal Recipes made with
+                A single page application showing the Meal Recipes built with
                 MERN stack.
               </p>
-              <p class="language">MongoDB, Express, React, Node JS</p>
+              <p class="language">
+                MongoDB, Express, React (Reqct Hooks and Reducers), Node JS
+              </p>
 
               <button>Launch Site</button>
             </div>
@@ -121,6 +131,7 @@
           <div class="about_me">
             <div class="about_me-profile">
               <img src="" alt="Yujeong's Photo" />
+              <p class="about_me-name"><strong>Name</strong>: Yujeong Choung</p>
               <p class="about_me-location">
                 <strong>Location</strong>: Vancouver BC, Canada
               </p>
@@ -151,6 +162,8 @@
         </div>
       </section>
     </main>
+
+    <i class="fas fa-arrow-circle-up scrollToTop" id="scrollToTop"></i>
 
     <!-- Footer -->
     <footer class="footer">

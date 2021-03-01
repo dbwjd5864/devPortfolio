@@ -2,9 +2,9 @@ const openMenu = document.getElementById('menu_open');
 const closeMenu = document.getElementById('menu_close');
 const menuList = document.getElementById('menu_list');
 const navLinks = document.querySelectorAll('.nav_link');
-
-const workTitle = document.querySelectorAll('#work_spell');
-const bouncingBalls = document.querySelectorAll('#bouncing_ball');
+const sections = document.querySelectorAll('section');
+console.log(sections); //////////
+const scrollToTop = document.getElementById('scrollToTop');
 
 // Open the Menu
 openMenu.addEventListener('click', () => {
@@ -30,10 +30,32 @@ function navAction() {
 }
 
 // Scroll to specific position
-
-const scrollToY = (y) => {
-  window.scrollTo({
-    top: y,
-    behavior: 'smooth',
+window.addEventListener('scroll', () => {
+  const { scrollTop } = document.documentElement;
+  sections.forEach((link, index) => {
+    if (
+      scrollTop > link.offsetTop - sections[0].offsetTop &&
+      scrollTop < link.offsetHeight + link.offsetTop - 20
+    ) {
+      navLinks[index].classList.add('current');
+    } else {
+      navLinks[index].classList.remove('current');
+    }
   });
-};
+});
+
+scrollToTop.addEventListener('click', () =>
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
+);
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+    });
+  });
+});
