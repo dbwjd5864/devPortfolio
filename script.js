@@ -4,6 +4,7 @@ const menuList = document.getElementById('menu_list');
 const navLinks = document.querySelectorAll('.nav_link');
 const sections = document.querySelectorAll('section');
 const scrollToTop = document.getElementById('scrollToTop');
+const emailResult = document.getElementById('email_status');
 
 // Open the Menu
 openMenu.addEventListener('click', () => {
@@ -64,3 +65,33 @@ navLinks.forEach((link) => {
     });
   });
 });
+
+// Send Email through Contact Form
+document
+  .getElementById('contact_form')
+  .addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // these IDs from the previous steps
+    emailjs.sendForm('yujeong', 'yujeong_gmail', this).then(
+      function () {
+        emailResult.classList.add('active');
+        emailResult.innerText = 'Sent Successfully.';
+
+        document.getElementById('contact_name').value = '';
+        document.getElementById('contact_eamil').value = '';
+        document.getElementById('contact_meassage').value = '';
+
+        setTimeout(function () {
+          emailResult.classList.remove('active');
+        }, 4000);
+      },
+      function (error) {
+        emailResult.classList.add('active');
+        emailResult.innerText = 'Something went wrong.';
+        setTimeout(function () {
+          emailResult.classList.remove('active');
+        }, 4000);
+      }
+    );
+  });

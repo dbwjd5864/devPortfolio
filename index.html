@@ -10,6 +10,15 @@
       integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
       crossorigin="anonymous"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init('user_hNxClD2aYPt5DCa0DQmkT');
+      })();
+    </script>
     <title>Yujeong Choung</title>
   </head>
   <body>
@@ -46,14 +55,20 @@
             <h1>Hello, <br /><span>I am Yujeong Choung</span></h1>
             <div class="btn_container">
               <div class="btn_left bar"></div>
-              <button class="work_btn" id="work_btn">Work</button>
+              <button class="work_btn" id="work_btn">
+                <a href="#work">Work</a>
+              </button>
               <div class="btn_right bar"></div>
             </div>
 
             <div class="btn_container">
               <div class="btn_left bar"></div>
               <button class="resume_btn" id="resume_btn">
-                <a target="_blank" href="">Resume</a>
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1UChwn8adJhaeUpzIvEzuNHXAaEv3wucU/view?usp=sharing"
+                  >Resume</a
+                >
               </button>
               <div class="btn_right bar"></div>
             </div>
@@ -102,14 +117,20 @@
                   alt="Meal Planner Website"
                 />
                 <div class="work_imgSite">
-                  <button class="btn-site">Launch Site</button>
+                  <button class="btn-site">
+                    <a target="_blank" href="https://yumplan.herokuapp.com/"
+                      >Launch Site</a
+                    >
+                  </button>
                 </div>
               </div>
 
               <div class="work_details">
                 <p class="description">
                   <strong>Description</strong> A single page application showing
-                  the Meal Recipes built with MERN stack.
+                  the Meal Recipes built with MERN stack. User can get some meal
+                  ideas from other users. Users can post their weekly meal plan
+                  to share or create meal planner after login as well.
                 </p>
                 <p class="language">
                   <strong>Language</strong>
@@ -196,6 +217,7 @@
             <span class="me">ME</span>
           </div>
         </h2>
+
         <div class="about_container-left container">
           <div class="about_me">
             <div class="about_me-profile">
@@ -211,16 +233,21 @@
           </div>
         </div>
         <div class="about_container-right container">
-          <p class="about_me-name"><strong>Name</strong>: Yujeong Choung</p>
-          <p class="about_me-location">
-            <strong>Location</strong>: Vancouver BC, Canada
-          </p>
-          <p class="about_me-language">
-            <strong>Language</strong>: English, Korean
-          </p>
+          <div class="about_me-bio">
+            <p class="about_me-name"><strong>Name</strong>: Yujeong Choung</p>
+            <p class="about_me-location">
+              <strong>Location</strong>: Vancouver BC, Canada
+            </p>
+            <p class="about_me-language">
+              <strong>Language</strong>: English, Korean
+            </p>
+          </div>
           <p class="about_me-description">
-            Hi, my name is Yujeong and I finished my Computer Studies diploma
-            program on December, 2020.
+            Hi, my name is Yujeong and I am a junior web develooper. I finished
+            my Computer Science diploma program on December, 2020. I have
+            learned and developed web-based applications from design to coding
+            for school projects and personal study. I am passionate about
+            learning new things. I am looking forward to hearing from you.
           </p>
         </div>
       </section>
@@ -236,8 +263,10 @@
               Thank you for reaching out to me.
             </h1>
 
+            <div id="email_status" class="email_status"></div>
+
             <div class="contact_me-formContainer">
-              <form id="contact_form" method="post" action="/">
+              <form id="contact_form">
                 <div class="contact_form-group">
                   <label for="name" class="contact_form-label">Name: </label>
                   <input
@@ -253,10 +282,10 @@
                 <div class="contact_form-group">
                   <label for="email" class="contact_form-label">Email: </label>
                   <input
-                    type="text"
+                    type="email"
                     placeholder="Enter you email"
                     name="email"
-                    id="contact_email"
+                    id="contact_eamil"
                     class="contact_form-input"
                     required="required"
                   />
@@ -270,7 +299,7 @@
                     type="text"
                     placeholder="Please write your message here."
                     name="message"
-                    id="contact_message"
+                    id="contact_meassage"
                     class="contact_form-input textarea"
                     required="required"
                   ></textarea>

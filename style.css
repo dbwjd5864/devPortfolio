@@ -87,7 +87,6 @@ section {
 .title {
   font-weight: 800;
   font-size: 4rem;
-  text-shadow: 2px 2px 5px #c48c61;
   letter-spacing: 1.7rem;
   text-transform: uppercase;
 }
@@ -178,6 +177,10 @@ header {
 }
 
 /* ----------- Home ----------- */
+.home_container > svg {
+  margin-top: -1rem;
+}
+
 .home_content {
   height: 70vh;
   display: flex;
@@ -312,6 +315,7 @@ header {
 .list_title {
   font-size: 2rem;
   letter-spacing: 0.25rem;
+  text-shadow: 2px 2px 5px #c48c61;
 }
 
 .list {
@@ -328,6 +332,11 @@ header {
   border-radius: 10px;
   background-color: #fffbf8;
   padding: 1rem 1.3rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-site:hover {
+  background-color: var(--secondary-color);
 }
 
 .work_details {
@@ -392,16 +401,19 @@ header {
 
 .about_container-right {
   border: 7px solid var(--primary-color);
-  width: 60%;
+  width: 70%;
   height: 50rem;
   align-self: flex-end;
   font-size: 2rem;
   margin-top: -20rem;
   padding: 2rem;
 }
+.about_me-bio {
+  margin-left: 10rem;
+}
 
-.about_container-right > p {
-  line-height: 4rem;
+.about_me-bio > p {
+  line-height: 3rem;
 }
 
 .about_title {
@@ -419,6 +431,13 @@ header {
   height: 30rem;
   position: relative;
   z-index: 1;
+}
+
+.about_me-description {
+  width: 85%;
+  text-align: center;
+  margin-top: 2rem;
+  line-height: 3.2rem;
 }
 
 .about_img {
@@ -514,6 +533,7 @@ textarea:focus {
   width: 20rem;
   height: 5rem;
   margin-top: 2rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .contact_btn:hover {
@@ -525,6 +545,25 @@ textarea:focus {
   height: 20rem;
   line-height: 2rem;
 }
+
+.email_status {
+  font-size: 2rem;
+  text-align: center;
+  opacity: 0;
+  width: 70%;
+  visibility: hidden;
+  padding: 0.8rem 2rem;
+  background-color: rgb(255, 225, 162);
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  transition: opacity 1s ease-in-out;
+}
+
+.email_status.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* ----------- Footer ----------- */
 .footer {
   background-color: antiquewhite;
