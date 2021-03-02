@@ -58,9 +58,16 @@
               <div class="btn_right bar"></div>
             </div>
 
-            <div class="icon-container">
-              <i class="fab fa-github icon"></i>
-              <i class="fas fa-envelope icon"></i>
+            <div class="icon_container">
+              <a
+                target="_blank"
+                href="https://github.com/dbwjd5864?tab=repositories"
+              >
+                <i class="fab fa-github icon"></i>
+              </a>
+              <a href="mailto:yjchoung10@gmail.com">
+                <i class="fas fa-envelope icon"></i>
+              </a>
             </div>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -137,17 +144,46 @@
               <div class="list-container">
                 <h3 class="list_title">Sweets</h3>
               </div>
-              <img class="work_img" src="" alt="Sweets Game" />
 
-              <p class="description">~~~~~~ built with MERN stack.</p>
-              <p class="language">React, MongoDB, Express, Nodejs</p>
-            </div>
+              <div class="work_imgContainer">
+                <img
+                  class="work_img"
+                  src="./src/yumplan.gif"
+                  alt="Meal Planner Website"
+                />
+                <div class="work_imgSite">
+                  <button class="btn-site">Launch Site</button>
+                </div>
+              </div>
 
-            <div class="work3 list">
-              <img class="work_img" src="" alt="" />
-              <h3 class="list_title"></h3>
-              <p class="description"></p>
-              <p class="language"></p>
+              <div class="work_details">
+                <p class="description">
+                  <strong>Description</strong> A simple game built with
+                  javascript and canvas (School Project). The player controls
+                  their character using keyboard’s left and right arrow keys to
+                  collect the falling candy avoiding the falling pumpkins.
+                </p>
+                <p class="language">
+                  <strong>Language</strong>
+                  <span
+                    >Html
+                    <svg class="work_icon">
+                      <use xlink:href="src/sprite.svg#icon-html5"></use>
+                    </svg>
+                  </span>
+                  <span>
+                    Javascript
+                    <svg class="work_icon">
+                      <use xlink:href="src/sprite.svg#icon-javascript"></use>
+                    </svg>
+                  </span>
+                  <span>
+                    Css<svg class="work_icon">
+                      <use xlink:href="src/sprite.svg#icon-css3"></use>
+                    </svg>
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -191,14 +227,66 @@
 
       <section class="contact" id="contact">
         <div class="contact_container container">
-          <h2 class="contact_title title">
-            Contact Me
-            <span class="contact_spell">.</span>
-          </h2>
+          <div class="contact_title-Container">
+            <h2 class="contact_title title">Contact Me</h2>
+          </div>
 
           <div class="contact_me">
-            <div class="about_me-form">
-              <form></form>
+            <h1 class="contact_me-greeting">
+              Thank you for reaching out to me.
+            </h1>
+
+            <div class="contact_me-formContainer">
+              <form id="contact_form" method="post" action="/">
+                <div class="contact_form-group">
+                  <label for="name" class="contact_form-label">Name: </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    name="name"
+                    id="contact_name"
+                    class="contact_form-input"
+                    required="required"
+                  />
+                </div>
+
+                <div class="contact_form-group">
+                  <label for="email" class="contact_form-label">Email: </label>
+                  <input
+                    type="text"
+                    placeholder="Enter you email"
+                    name="email"
+                    id="contact_email"
+                    class="contact_form-input"
+                    required="required"
+                  />
+                </div>
+
+                <div class="contact_form-group">
+                  <label for="message" class="contact_form-label"
+                    >Message:
+                  </label>
+                  <textarea
+                    type="text"
+                    placeholder="Please write your message here."
+                    name="message"
+                    id="contact_message"
+                    class="contact_form-input textarea"
+                    required="required"
+                  ></textarea>
+                </div>
+
+                <div class="contact_form-group">
+                  <button
+                    name="submit"
+                    type="submit"
+                    id="contact_submit"
+                    class="contact_btn"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -209,7 +297,10 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <h4></h4>
+      <div class="footer_container">
+        <h4>I am always looking for opportunities :)</h4>
+        <small class="copyright">&copy; Copyright 2021, Yujeong Choung</small>
+      </div>
     </footer>
 
     <script src="script.js"></script>
