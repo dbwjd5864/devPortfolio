@@ -11,8 +11,6 @@ It showcases my personal works, school projects and contact information. It is a
 
 ## Sections 📖
 
----
-
 ✔️ Home
 
 - Resume
@@ -32,9 +30,7 @@ It showcases my personal works, school projects and contact information. It is a
 
 <br>
 
-## Technologies Used
-
----
+## Technologies Used 🛠️
 
 - HTML <img align='center' src="src/html5.svg" width="30" height="30">
 - CSS <img align='center' src="src/css3.svg" width="30" height="30" >
