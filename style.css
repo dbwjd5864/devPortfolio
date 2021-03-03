@@ -80,7 +80,6 @@ section:nth-child(3) {
 
 section {
   max-width: 100vw;
-  min-height: 100vh;
   margin-bottom: 4rem;
 }
 
@@ -613,10 +612,36 @@ textarea:focus {
 /* Tab land */
 @media only screen and (max-width: 75em) {
   /* width < 1200px */
-  /* 1 rem = 9px, 9/16 = 56.25% */
-  /* html {
-    font-size: 56.25%;
-  } */
+  /* 1 rem = 11px, 11/16 = 68.75% */
+  html {
+    font-size: 68.75%;
+  }
+
+  .home_content > h1 {
+    font-size: 5rem;
+  }
+
+  .work_btn > a,
+  .resume_btn > a {
+    font-size: 3rem;
+  }
+
+  .menu_list {
+    align-items: center;
+  }
+
+  .about {
+    justify-content: center;
+    height: 130rem;
+  }
+
+  .contact {
+    height: 100rem;
+  }
+
+  .about_me-description {
+    margin-top: 3.5rem;
+  }
 }
 
 /* Tab port */
@@ -626,10 +651,29 @@ textarea:focus {
   html {
     font-size: 50%;
   }
+}
 
-  /* ------------ Header ------------ */
+/* Phone */
+@media only screen and (max-width: 37.5em) {
+  /* width < 600px */
+  body {
+    overflow-x: hidden;
+  }
+
+  .home_content > h1 {
+    font-size: 4rem;
+  }
+
+  .language > span {
+    width: 100%;
+  }
+
   .menu ul {
     flex-direction: column;
+  }
+
+  .menu ul li > a {
+    font-size: 3rem;
   }
 
   .menu ul > li {
@@ -639,11 +683,12 @@ textarea:focus {
   .menu_open {
     display: flex;
     justify-content: flex-end;
-    margin: 2rem 2rem;
+    margin: 2.6rem 4rem;
   }
 
   .menu_close {
     display: block;
+    margin: 0 2.5rem;
   }
 
   .menu_list {
@@ -667,21 +712,66 @@ textarea:focus {
   .active {
     right: 0;
   }
-}
-
-/* Phone */
-@media only screen and (max-width: 37.5em) {
-  /* width < 600px */
 
   .work_img {
     width: 80vw;
+  }
+  .about {
+    align-items: center;
+  }
+
+  .about_container-left {
+    background-color: transparent;
+    height: 40rem;
+  }
+
+  .about_container-right {
+    margin: auto;
+    width: inherit;
+  }
+
+  .about_me-bio {
+    margin-left: 0;
+  }
+
+  .about_title {
+    align-self: center;
+  }
+
+  .contact_me-greeting {
+    font-size: 2.5rem;
+  }
+
+  .contact_me-formContainer > form {
+    width: 80%;
   }
 }
 
 /* Small phone */
 @media only screen and (max-width: 24em) {
   /* width < 384px */
-  .html {
-    font-size: 50%;
+
+  .about_container-right {
+    height: 60rem;
+  }
+
+  .home_content > h1 {
+    letter-spacing: 0;
+  }
+
+  .contact_me-formContainer > form {
+    width: 60%;
+  }
+
+  .menu_open {
+    margin: 2rem 3rem;
+  }
+
+  .menu_close {
+    margin: 0 1.4rem;
+  }
+
+  .contact_me-greeting {
+    text-align: center;
   }
 }
