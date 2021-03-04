@@ -1,6 +1,6 @@
 # Yujeong's Portfolio
 
-Hi I am a junior Web Developer located in Vancouver Canada. This is my personal portfolio website built with Javascript and CSS only from **Design** to **Construction**. <br>
+Hi I am a junior Web Developer located in Vancouver Canada. This is my personal portfolio website built with Javascript and CSS only from **Scratch** to **Construction**. <br>
 It showcases my personal works, school projects and contact information. It is also static and fully responsive.
 
 > Live Demo : <a href='https://yujeong-portfolio.netlify.app/' > Click Here :)</a>
