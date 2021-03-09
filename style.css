@@ -300,7 +300,7 @@ header {
   opacity: 1;
 }
 
-.list-container {
+.list_container {
   background-color: var(--secondary-color);
   border-radius: 50%;
   display: flex;
@@ -315,6 +315,7 @@ header {
   font-size: 2rem;
   letter-spacing: 0.25rem;
   text-shadow: 2px 2px 5px #c48c61;
+  text-align: center;
 }
 
 .list {
