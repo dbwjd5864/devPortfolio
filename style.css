@@ -615,7 +615,7 @@ textarea:focus {
   /* width < 1200px */
   /* 1 rem = 11px, 11/16 = 68.75% */
   html {
-    font-size: 68.75%;
+    font-size: 60%;
   }
 
   .home_content > h1 {
