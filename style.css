@@ -402,11 +402,11 @@ header {
 .about_container-right {
   border: 7px solid var(--primary-color);
   width: 70%;
-  height: 50rem;
+  height: auto;
   align-self: flex-end;
   font-size: 2rem;
   margin-top: -20rem;
-  padding: 2rem;
+  padding: 5rem 2.3rem;
 }
 .about_me-bio {
   margin-left: 10rem;
