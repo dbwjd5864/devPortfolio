@@ -623,7 +623,8 @@ textarea:focus {
   }
 
   .work_btn > a,
-  .resume_btn > a {
+  .resume_btn > a,
+  .portfolio_btn > a {
     font-size: 3rem;
   }
 
